@@ -1,0 +1,11 @@
+datasources:4e54ff05f2c9502d76ecf38e6cce9484ba04fa46
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
+suitesfrom:no-suites-from-option
+file:ff3ce7e0875a79aaaedde8e68c2abe254f14a359
+--suite Suites.Aleart
+--suite Suites.Class1
+--suite Suites.Class3
+--suite Suites.DD1
+--suite Suites.DD2
+--suite Suites.Frame
+--suite Suites.Mouseoperation

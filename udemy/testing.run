@@ -1,0 +1,2 @@
+cd C:\Users\Elavarasan\PycharmProjects\gitproject
+pabot --processes 4 --outputdir Results udemy\*.robot

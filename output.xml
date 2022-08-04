@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Rebot 5.0.1 (Python 3.10.5 on win32)" generated="20220803 21:27:28.803" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="Aleart" source="C:\Users\Elavarasan\PycharmProjects\gitproject\udemy\aleart.robot">
+<test id="s1-s1-t1" name="check the alearts and frame" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<arg>headlessChrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:26:27.902" level="INFO">Opening browser 'headlessChrome' to base url 'https://testautomationpractice.blogspot.com/'.</msg>
+<status status="PASS" starttime="20220803 21:26:27.902" endtime="20220803 21:26:42.393"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@onclick='myFunction()']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:42.394" level="INFO">Clicking element '//button[@onclick='myFunction()']'.</msg>
+<status status="PASS" starttime="20220803 21:26:42.393" endtime="20220803 21:26:43.457"/>
+</kw>
+<kw name="Handle Alert" library="SeleniumLibrary">
+<arg>DISMISS</arg>
+<doc>Handles the current alert and returns its message.</doc>
+<msg timestamp="20220803 21:26:43.458" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<status status="PASS" starttime="20220803 21:26:43.457" endtime="20220803 21:26:43.591"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:26:43.592" endtime="20220803 21:26:48.248"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:27.902" endtime="20220803 21:26:48.248"/>
+</test>
+<status status="PASS" starttime="20220803 21:26:27.480" endtime="20220803 21:26:48.249"/>
+</suite>
+<suite id="s1-s2" name="Class1" source="C:\Users\Elavarasan\PycharmProjects\gitproject\udemy\class1.robot">
+<test id="s1-s2-t1" name="logintest invalid" line="8">
+<kw name="open the application" library="classresource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:26:27.917" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20220803 21:26:27.916" endtime="20220803 21:26:36.064"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:27.915" endtime="20220803 21:26:36.064"/>
+</kw>
+<kw name="Login with login form">
+<arg>${valid username}</arg>
+<arg>${invalid password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:36.067" level="INFO">Typing text 'admin@yourstore.com' into text field 'Email'.</msg>
+<status status="PASS" starttime="20220803 21:26:36.065" endtime="20220803 21:26:36.243"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:36.245" level="INFO">Typing text 'ela' into text field 'Password'.</msg>
+<status status="PASS" starttime="20220803 21:26:36.244" endtime="20220803 21:26:36.419"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 21:26:41.441" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220803 21:26:36.420" endtime="20220803 21:26:41.441"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:41.443" level="INFO">Clicking element 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220803 21:26:41.441" endtime="20220803 21:26:42.161"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:36.064" endtime="20220803 21:26:42.162"/>
+</kw>
+<kw name="check the error message">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220803 21:26:42.393" level="INFO">Current page contains text 'Login was unsuccessful'.</msg>
+<status status="PASS" starttime="20220803 21:26:42.163" endtime="20220803 21:26:42.393"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:42.162" endtime="20220803 21:26:42.393"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:26:42.394" endtime="20220803 21:26:50.328"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:27.913" endtime="20220803 21:26:50.329"/>
+</test>
+<status status="PASS" starttime="20220803 21:26:27.468" endtime="20220803 21:26:50.332"/>
+</suite>
+<suite id="s1-s3" name="Class3" source="C:\Users\Elavarasan\PycharmProjects\gitproject\udemy\class3.robot">
+<test id="s1-s3-t1" name="Test the form screen" line="9">
+<kw name="open the application">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:26:27.902" level="INFO">Opening browser 'Chrome' to base url 'https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm'.</msg>
+<status status="PASS" starttime="20220803 21:26:27.902" endtime="20220803 21:26:37.141"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220803 21:26:37.142" endtime="20220803 21:26:37.271"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:27.902" endtime="20220803 21:26:37.271"/>
+</kw>
+<kw name="select the dropdown">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>xpath://*[@name='continents']</arg>
+<arg>Antartica</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220803 21:26:37.272" level="INFO">Selecting options from selection list 'xpath://*[@name='continents']' by label Antartica.</msg>
+<status status="PASS" starttime="20220803 21:26:37.272" endtime="20220803 21:26:37.528"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 21:26:40.531" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220803 21:26:37.529" endtime="20220803 21:26:40.531"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>xpath://*[@name='continents']</arg>
+<arg>3</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20220803 21:26:40.532" level="INFO">Selecting options from selection list 'xpath://*[@name='continents']' by index 3.</msg>
+<status status="PASS" starttime="20220803 21:26:40.531" endtime="20220803 21:26:46.273"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 21:26:49.277" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20220803 21:26:46.274" endtime="20220803 21:26:49.277"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:37.272" endtime="20220803 21:26:49.278"/>
+</kw>
+<kw name="select the list">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>selenium_commands</arg>
+<arg>Switch Commands</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220803 21:26:49.280" level="INFO">Selecting options from selection list 'selenium_commands' by label Switch Commands.</msg>
+<status status="PASS" starttime="20220803 21:26:49.279" endtime="20220803 21:26:53.290"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>selenium_commands</arg>
+<arg>Wait Commands</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20220803 21:26:53.290" level="INFO">Selecting options from selection list 'selenium_commands' by label Wait Commands.</msg>
+<status status="PASS" starttime="20220803 21:26:53.290" endtime="20220803 21:26:53.399"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:49.278" endtime="20220803 21:26:53.400"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:26:53.400" endtime="20220803 21:26:57.670"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:27.888" endtime="20220803 21:26:57.670"/>
+</test>
+<status status="PASS" starttime="20220803 21:26:27.483" endtime="20220803 21:26:57.673"/>
+</suite>
+<suite id="s1-s4" name="DD1" source="C:\Users\Elavarasan\PycharmProjects\gitproject\udemy\DD1.robot">
+<test id="s1-s4-t1" name="Login with invalid user" line="8">
+<kw name="open the application" library="classresource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:26:27.908" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20220803 21:26:27.908" endtime="20220803 21:26:36.774"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:27.908" endtime="20220803 21:26:36.774"/>
+</kw>
+<kw name="Login the app">
+<arg>admin@yourstore.com</arg>
+<arg>2344</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:36.774" level="INFO">Typing text 'admin@yourstore.com' into text field 'Email'.</msg>
+<status status="PASS" starttime="20220803 21:26:36.774" endtime="20220803 21:26:37.035"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:37.036" level="INFO">Typing text '2344' into text field 'Password'.</msg>
+<status status="PASS" starttime="20220803 21:26:37.035" endtime="20220803 21:26:37.136"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:37.138" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220803 21:26:37.137" endtime="20220803 21:26:37.798"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220803 21:26:37.852" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<status status="PASS" starttime="20220803 21:26:37.799" endtime="20220803 21:26:37.852"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:36.774" endtime="20220803 21:26:37.853"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:26:37.854" endtime="20220803 21:26:40.505"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:27.902" endtime="20220803 21:26:40.505"/>
+</test>
+<test id="s1-s4-t2" name="pass" line="9">
+<kw name="open the application" library="classresource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:26:40.571" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20220803 21:26:40.570" endtime="20220803 21:26:48.307"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:40.569" endtime="20220803 21:26:48.307"/>
+</kw>
+<kw name="Login the app">
+<arg>admin@yourstore.com</arg>
+<arg>sdfdsf</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:48.309" level="INFO">Typing text 'admin@yourstore.com' into text field 'Email'.</msg>
+<status status="PASS" starttime="20220803 21:26:48.308" endtime="20220803 21:26:48.422"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:48.423" level="INFO">Typing text 'sdfdsf' into text field 'Password'.</msg>
+<status status="PASS" starttime="20220803 21:26:48.423" endtime="20220803 21:26:48.542"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:48.543" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220803 21:26:48.542" endtime="20220803 21:26:49.169"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220803 21:26:49.188" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<status status="PASS" starttime="20220803 21:26:49.170" endtime="20220803 21:26:49.188"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:48.308" endtime="20220803 21:26:49.189"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:26:49.190" endtime="20220803 21:26:54.755"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:40.506" endtime="20220803 21:26:54.755"/>
+</test>
+<status status="PASS" starttime="20220803 21:26:27.498" endtime="20220803 21:26:54.757"/>
+</suite>
+<suite id="s1-s5" name="DD2" source="C:\Users\Elavarasan\PycharmProjects\gitproject\udemy\DD2.robot">
+<test id="s1-s5-t1" name="Login with the username admin@yourstore.com password 12344" line="9">
+<kw name="open the application" library="classresource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:26:50.194" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20220803 21:26:50.194" endtime="20220803 21:26:57.685"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:50.193" endtime="20220803 21:26:57.685"/>
+</kw>
+<kw name="Login the app">
+<arg>admin@yourstore.com</arg>
+<arg>12344</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:57.687" level="INFO">Typing text 'admin@yourstore.com' into text field 'Email'.</msg>
+<status status="PASS" starttime="20220803 21:26:57.687" endtime="20220803 21:26:57.980"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:57.981" level="INFO">Typing text '12344' into text field 'Password'.</msg>
+<status status="PASS" starttime="20220803 21:26:57.980" endtime="20220803 21:26:58.172"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220803 21:26:58.173" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220803 21:26:58.172" endtime="20220803 21:26:59.038"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220803 21:26:59.068" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<status status="PASS" starttime="20220803 21:26:59.039" endtime="20220803 21:26:59.068"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:57.686" endtime="20220803 21:26:59.069"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:26:59.069" endtime="20220803 21:27:01.777"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:50.186" endtime="20220803 21:27:01.778"/>
+</test>
+<test id="s1-s5-t2" name="Login with the username admin@yourstore.com password ddddd" line="9">
+<kw name="open the application" library="classresource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:27:01.798" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20220803 21:27:01.798" endtime="20220803 21:27:09.452"/>
+</kw>
+<status status="PASS" starttime="20220803 21:27:01.798" endtime="20220803 21:27:09.453"/>
+</kw>
+<kw name="Login the app">
+<arg>admin@yourstore.com</arg>
+<arg>ddddd</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:09.456" level="INFO">Typing text 'admin@yourstore.com' into text field 'Email'.</msg>
+<status status="PASS" starttime="20220803 21:27:09.456" endtime="20220803 21:27:09.592"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:09.593" level="INFO">Typing text 'ddddd' into text field 'Password'.</msg>
+<status status="PASS" starttime="20220803 21:27:09.593" endtime="20220803 21:27:09.707"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:09.708" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220803 21:27:09.707" endtime="20220803 21:27:10.269"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220803 21:27:10.296" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<status status="PASS" starttime="20220803 21:27:10.272" endtime="20220803 21:27:10.296"/>
+</kw>
+<status status="PASS" starttime="20220803 21:27:09.454" endtime="20220803 21:27:10.297"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:27:10.297" endtime="20220803 21:27:12.497"/>
+</kw>
+<status status="PASS" starttime="20220803 21:27:01.780" endtime="20220803 21:27:12.497"/>
+</test>
+<test id="s1-s5-t3" name="Login with the username admin@yourstore.com password ffff" line="9">
+<kw name="open the application" library="classresource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:27:12.499" level="INFO">Opening browser 'Chrome' to base url 'https://admin-demo.nopcommerce.com/login'.</msg>
+<status status="PASS" starttime="20220803 21:27:12.499" endtime="20220803 21:27:17.524"/>
+</kw>
+<status status="PASS" starttime="20220803 21:27:12.499" endtime="20220803 21:27:17.525"/>
+</kw>
+<kw name="Login the app">
+<arg>admin@yourstore.com</arg>
+<arg>ffff</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Email</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:17.525" level="INFO">Typing text 'admin@yourstore.com' into text field 'Email'.</msg>
+<status status="PASS" starttime="20220803 21:27:17.525" endtime="20220803 21:27:17.671"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>Password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:17.672" level="INFO">Typing text 'ffff' into text field 'Password'.</msg>
+<status status="PASS" starttime="20220803 21:27:17.671" endtime="20220803 21:27:17.785"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:17.787" level="INFO">Clicking button 'xpath://button[@type='submit']'.</msg>
+<status status="PASS" starttime="20220803 21:27:17.786" endtime="20220803 21:27:18.381"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login was unsuccessful.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220803 21:27:18.411" level="INFO">Current page contains text 'Login was unsuccessful.'.</msg>
+<status status="PASS" starttime="20220803 21:27:18.382" endtime="20220803 21:27:18.412"/>
+</kw>
+<status status="PASS" starttime="20220803 21:27:17.525" endtime="20220803 21:27:18.412"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:27:18.413" endtime="20220803 21:27:20.696"/>
+</kw>
+<status status="PASS" starttime="20220803 21:27:12.498" endtime="20220803 21:27:20.696"/>
+</test>
+<status status="PASS" starttime="20220803 21:26:49.272" endtime="20220803 21:27:20.702"/>
+</suite>
+<suite id="s1-s6" name="Frame" source="C:\Users\Elavarasan\PycharmProjects\gitproject\udemy\frame.robot">
+<test id="s1-s6-t1" name="check the alearts and frame" line="6">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.selenium.dev/selenium/docs/api/java/index.html?index-all.html</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:26:52.752" level="INFO">Opening browser 'Chrome' to base url 'https://www.selenium.dev/selenium/docs/api/java/index.html?index-all.html'.</msg>
+<status status="PASS" starttime="20220803 21:26:52.750" endtime="20220803 21:27:02.114"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>xpath://*[@name='packageListFrame']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220803 21:27:02.114" level="INFO">Selecting frame 'xpath://*[@name='packageListFrame']'.</msg>
+<status status="PASS" starttime="20220803 21:27:02.114" endtime="20220803 21:27:02.264"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>org.openqa.selenium</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:02.264" level="INFO">Clicking link 'org.openqa.selenium'.</msg>
+<status status="PASS" starttime="20220803 21:27:02.264" endtime="20220803 21:27:04.316"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220803 21:27:04.316" endtime="20220803 21:27:04.319"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>xpath://*[@name='packageFrame']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220803 21:27:04.320" level="INFO">Selecting frame 'xpath://*[@name='packageFrame']'.</msg>
+<status status="PASS" starttime="20220803 21:27:04.320" endtime="20220803 21:27:04.962"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Alert</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:04.963" level="INFO">Clicking link 'Alert'.</msg>
+<status status="PASS" starttime="20220803 21:27:04.963" endtime="20220803 21:27:05.224"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220803 21:27:05.226" endtime="20220803 21:27:05.233"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>xpath://*[@name='classFrame']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20220803 21:27:05.233" level="INFO">Selecting frame 'xpath://*[@name='classFrame']'.</msg>
+<status status="PASS" starttime="20220803 21:27:05.233" endtime="20220803 21:27:05.801"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Index</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:05.802" level="INFO">Clicking link 'Index'.</msg>
+<status status="PASS" starttime="20220803 21:27:05.801" endtime="20220803 21:27:06.719"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20220803 21:27:06.719" endtime="20220803 21:27:06.809"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:27:06.810" endtime="20220803 21:27:09.146"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:27:09.148" endtime="20220803 21:27:09.152"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:52.743" endtime="20220803 21:27:09.153"/>
+</test>
+<status status="PASS" starttime="20220803 21:26:51.964" endtime="20220803 21:27:09.158"/>
+</suite>
+<suite id="s1-s7" name="Mouseoperation" source="C:\Users\Elavarasan\PycharmProjects\gitproject\udemy\mouseoperation.robot">
+<test id="s1-s7-t1" name="Mouse operation" line="5">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://swisnl.github.io/jQuery-contextMenu/demo.html</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220803 21:26:56.745" level="INFO">Opening browser 'Chrome' to base url 'http://swisnl.github.io/jQuery-contextMenu/demo.html'.</msg>
+<status status="PASS" starttime="20220803 21:26:56.745" endtime="20220803 21:27:07.842"/>
+</kw>
+<kw name="Open Context Menu" library="SeleniumLibrary">
+<arg>css:.btn-neutral</arg>
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20220803 21:27:07.844" endtime="20220803 21:27:08.194"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 21:27:13.212" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220803 21:27:08.194" endtime="20220803 21:27:13.212"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://testautomationpractice.blogspot.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220803 21:27:13.213" level="INFO">Opening url 'https://testautomationpractice.blogspot.com/'</msg>
+<status status="PASS" starttime="20220803 21:27:13.212" endtime="20220803 21:27:21.031"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@ondblclick='myFunction1()']</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20220803 21:27:21.033" level="INFO">Double clicking element 'xpath://button[@ondblclick='myFunction1()']'.</msg>
+<status status="PASS" starttime="20220803 21:27:21.032" endtime="20220803 21:27:21.360"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>draggable</arg>
+<arg>droppable</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" starttime="20220803 21:27:21.360" endtime="20220803 21:27:22.041"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220803 21:27:26.061" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20220803 21:27:22.043" endtime="20220803 21:27:26.062"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220803 21:27:26.063" endtime="20220803 21:27:28.332"/>
+</kw>
+<status status="PASS" starttime="20220803 21:26:56.745" endtime="20220803 21:27:28.332"/>
+</test>
+<status status="PASS" starttime="20220803 21:26:56.174" endtime="20220803 21:27:28.332"/>
+</suite>
+<doc>[https://pabot.org/?ref=log|Pabot] result from 7 executions.</doc>
+<status status="PASS" starttime="20220803 21:26:27.424" endtime="20220803 21:27:28.367"/>
+</suite>
+<statistics>
+<total>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="10" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Aleart">Suites.Aleart</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Class1">Suites.Class1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s3" name="Class3">Suites.Class3</stat>
+<stat pass="2" fail="0" skip="0" id="s1-s4" name="DD1">Suites.DD1</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s5" name="DD2">Suites.DD2</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s6" name="Frame">Suites.Frame</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s7" name="Mouseoperation">Suites.Mouseoperation</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220803 21:26:27.908" level="ERROR">Error in file 'C:\Users\Elavarasan\PycharmProjects\gitproject\resourse\classresource.robot' on line 3: Importing library 'ExcelLibrary' failed: ModuleNotFoundError: No module named 'ExcelLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\Scripts\robot.exe
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\python310.zip
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\DLLs
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\lib
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\lib\site-packages</msg>
+<msg timestamp="20220803 21:26:27.902" level="ERROR">Error in file 'C:\Users\Elavarasan\PycharmProjects\gitproject\resourse\classresource.robot' on line 3: Importing library 'ExcelLibrary' failed: ModuleNotFoundError: No module named 'ExcelLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\Scripts\robot.exe
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\python310.zip
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\DLLs
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\lib
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\lib\site-packages</msg>
+<msg timestamp="20220803 21:26:50.080" level="ERROR">Error in file 'C:\Users\Elavarasan\PycharmProjects\gitproject\resourse\classresource.robot' on line 3: Importing library 'ExcelLibrary' failed: ModuleNotFoundError: No module named 'ExcelLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\Scripts\robot.exe
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\python310.zip
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\DLLs
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\lib
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10
+  C:\Users\Elavarasan\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\python3.10\lib\site-packages</msg>
+</errors>
+</robot>
